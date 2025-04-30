@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kata Alpaca</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" type="image/png" href="IMG/logo_Kat.png">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Botón para cambiar idioma -->
+    <header>
+        <div class="logo">
+            <a href="index.html" id="menu-logo" class="active">
+                <img src="IMG/logo_Kat.png" alt="Inicio">
+            </a>
+        </div>
+        <button class="menu-toggle" id="menu-toggle">☰</button>
+        <nav class="nav-menu" id="nav-menu">
+            <ul>
+                <li><a href="nosotros.html" id="menu-nosotros">Nosotros</a></li>
+                <li><a href="proceso.html" id="menu-proceso">Proceso</a></li>
+                <li><a href="producto.html" id="menu-productos">Producto</a></li>
+                <li><a href="compromiso.html" id="menu-compromiso">Compromiso</a></li>
+                <li><a href="contacto.html" id="menu-contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="idioma">
+            <a href="#" onclick="cambiarIdioma('en')">ENG</a> |
+            <a href="#" onclick="cambiarIdioma('es')">ESP</a>
+        </div>
+    </header>
+
+    <!-- Sección principal con video -->
+    <div class="hero">
+        <video autoplay muted loop id="videoFondo">
+            <source src="IMG/alpacas.mp4" type="video/mp4">
+        </video>
+        <div class="overlay">
+            <img src="IMG/alpacas.png" alt="Kata Alpaca" class="marca">
+        </div>
+    </div>
+
+    <!-- NOSOTROS -->
+    <section class="nosotros">
+        <div class="nosotros-contenedor">
+            <div class="nosotros-texto">
+                <h2 id="nosotros-titulo">30 años de experiencia en producción textil</h2>
+                <p id="nosotros-descripcion">Más de 30 años de producción textil en tejido de punto en las fibras más finas.</p>
+            </div>
+            <div class="nosotros-imagen">
+                <img src="IMG/alpa_nos.jpg" alt="Alpaca experiencia">
+            </div>
+        </div>
+    </section>
+
+    <!-- LINEA DE PRODUCTOS -->
+    <section class="productos">
+        <div class="productos-contenedor">
+            <div class="productos-texto">
+                <h2 id="productos-titulo">Líneas de productos</h2>
+                <a href="#" class="boton-galeria" id="productos-galeria">GALERIA</a>
+            </div>
+            <div class="productos-lista">
+                <div class="producto">
+                    <img src="IMG/linea_dama.jpg" alt="Línea de dama">
+                    <div class="producto-info">
+                        <h3 id="productos-dama">Línea de dama</h3>
+                        <p id="productos-dama-desc">Descubre destinos que no te puedes perder.</p>
+                    </div>
+                </div>
+                <div class="producto">
+                    <img src="IMG/linea_varon.jpg" alt="Línea de varón">
+                    <div class="producto-info">
+                        <h3 id="productos-varon">Línea de varón</h3>
+                        <p id="productos-varon-desc">Disfruta de un viaje sin complicaciones con estos consejos antes, durante y después del viaje.</p>
+                    </div>
+                </div>
+                <div class="producto">
+                    <img src="IMG/accesorios.jpg" alt="Accesorios">
+                    <div class="producto-info">
+                        <h3 id="productos-accesorios">Accesorios</h3>
+                        <p id="productos-accesorios-desc">Aprovecha al máximo tus vacaciones disfrutando de itinerarios únicos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESOS -->
+    <section class="procesos">
+        <h2 id="procesos-titulo">Procesos</h2>
+        <div class="procesos-contenedor">
+            <div class="proceso">
+                <img src="IMG/diseno.jpg" alt="Diseño">
+                <h3 id="titulo-diseno">Diseño</h3>
+                <p id="texto-diseno">Incluye los mejores posts de tus viajes para que tus posibles colaboradores se hagan una idea del tipo de trabajo que realizas.</p>
+            </div>
+            <div class="proceso">
+                <img src="IMG/tejido.jpg" alt="Tejido">
+                <h3 id="titulo-tejido">Tejido</h3>
+                <p id="texto-tejido">Incluye los mejores posts de tus viajes para que tus posibles colaboradores se hagan una idea del tipo de trabajo que realizas.</p>
+            </div>
+            <div class="proceso">
+                <img src="IMG/confeccion.jpg" alt="Confección">
+                <h3 id="titulo-confeccion">Confección</h3>
+                <p id="texto-confeccion">Incluye los mejores posts de tus viajes para que tus posibles colaboradores se hagan una idea del tipo de trabajo que realizas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section class="gallery">
+        <h2 id="gallery-title">Gallery</h2>
+        <div class="gallery-container">
+            <div class="gallery-item"><img src="IMG/galer01.jpg" alt="Product 1"></div>
+            <div class="gallery-item"><img src="IMG/galer02.jpg" alt="Product 2"></div>
+            <div class="gallery-item"><img src="IMG/linea_dama.jpg" alt="Product 3"></div>
+            <div class="gallery-item"><img src="IMG/galer03.jpg" alt="Product 4"></div>
+            <div class="gallery-item"><img src="IMG/galer04.jpg" alt="Product 5"></div>
+            <div class="gallery-item"><img src="IMG/galer05.jpg" alt="Product 6"></div>
+            <div class="gallery-item"><img src="IMG/galer06.jpg" alt="Product 7"></div>
+            <div class="gallery-item"><img src="IMG/galer07.jpg" alt="Product 8"></div>
+            <div class="gallery-item"><img src="IMG/galer08.jpg" alt="Product 9"></div>
+            <div class="gallery-item"><img src="IMG/galer09.jpg" alt="Product 10"></div>
+        </div>
+    </section>
+
+    <!-- ESTADISTICAS-->
+    <section class="stats-section">
+        <h1 id="title">Kata para el mundo</h1>
+        <h2 id="subtitle">ESTADÍSTICAS DE LA EMPRESA</h2>
+
+        <div class="stats-container">
+            <div class="stat-item">
+                <img src="icono/icono.png" alt="Trabajo">
+                <p id="work-since">Trabajando desde</p>
+                <h3>1991</h3>
+            </div>
+            <div class="stat-item">
+                <img src="icono/icono_mun.png" alt="Exportación">
+                <p id="export-since">Exportando desde</p>
+                <h3>2002</h3>
+            </div>
+            <div class="stat-item">
+                <img src="icono/icono_expor.png" alt="Países">
+                <p id="countries">Países a los que exportamos actualmente</p>
+                <h3>8</h3>
+            </div>
+            <div class="stat-item">
+                <img src="icono/icono_feria.png" alt="Ferias">
+                <p id="fairs">Ferias internacionales</p>
+                <h3>7</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer con redes sociales -->
+    <footer>
+        <p id="footer-text">Copyright © 2025 Kata Alpaca</p>
+        <div class="social">
+            <a href="https://web.facebook.com/kataalpaca/" target="_blank" rel="noopener">
+                <img src="icono/facebook.png" alt="Facebook">
+            </a>
+        </div>
+    </footer>
+
+    <!-- Script para cambio de idioma -->
+    <script src="JS/jscript.js"></script>
+</body>
+</html>

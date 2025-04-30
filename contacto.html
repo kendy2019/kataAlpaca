@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kata Alpaca</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/stylecont.css">
+    <link rel="icon" type="image/png" href="IMG/logo_Kat.png">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Menú de navegación fijo -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="IMG/logo_Kat.png" alt="Inicio">
+            </a>
+        </div>
+        <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+        <nav class="nav-menu" id="nav-menu">
+            <ul>
+                <li><a href="nosotros.html" id="menu-nosotros">Nosotros</a></li>
+                <li><a href="proceso.html" id="menu-proceso">Proceso</a></li>
+                <li><a href="producto.html" id="menu-productos">Producto</a></li>
+                <li><a href="compromiso.html" id="menu-compromiso">Compromiso</a></li>
+                <li><a href="contacto.html" id="menu-contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="idioma">
+            <a href="#" onclick="cambiarIdioma('en')">ENG</a> |
+            <a href="#" onclick="cambiarIdioma('es')">ESP</a>
+        </div>
+    </header>
+
+    <!-- Sección de contacto -->
+    <section class="contact">
+        <div class="contact-info">
+            <h2 id="contacto">Contactanos</h2>
+            <div class="info-item">
+                <img src="icono/icono_ubi.png" alt="Location">
+                <p>Av Tarapacá 1013-A, Miraflores, Arequipa</p>
+            </div>
+            <div class="info-item">
+                <img src="icono/icono_ven.png" alt="Email">
+                <p>ventas@kataalpaca.com</p>
+            </div>
+            <div class="info-item">
+                <img src="icono/icono_web.png" alt="Website">
+                <p>www.kataalpaca.com</p>
+            </div>
+            <div class="info-item">
+                <img src="icono/icono_tele.png" alt="Phone">
+                <p>+51 959226666</p>
+            </div>
+            <p id="descripcion"><em>Somos expertos en la creación de prendas de punto: ropa y accesorios de la más alta calidad.</em></p>
+        </div>
+        <div class="contact-image">
+            <img src="IMG/fondo_cont.jpg" alt="Background Image">
+        </div>
+    </section>
+
+    <!-- Footer con redes sociales -->
+    <footer>
+        <p class="copi">Copyright © 2025 Kata Alpaca</p>
+        <div class="social">
+            <a href="https://web.facebook.com/kataalpaca/" target="_blank" rel="noopener">
+                <img src="icono/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://instagram.com/kataalpaca" target="_blank" rel="noopener">
+                <img src="icono/instagram.png" alt="Instagram">
+            </a>
+        </div>
+    </footer>
+
+    <script src="JS/jscript.js"></script>
+</body>
+</html>

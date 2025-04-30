@@ -1,0 +1,634 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    background: #333;
+}
+
+/* Menú de navegación */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* LOGO */
+.logo img {
+    height: 70px;
+    transition: filter 0.3s ease, border 0.3s ease; /* Suaviza la transición del filtro y borde */
+}
+
+/*.logo a.active img {
+    filter: sepia(1) hue-rotate(320deg) saturate(2); 
+    border: 2px solid #5c4537; 
+    border-radius: 5px; 
+}*/
+
+/* MENÚ DE NAVEGACIÓN */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #5c4537;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #8c6f54;
+}
+
+nav ul li a.active {
+    color: #8c6f54; /* Color para el elemento activo, igual que el hover para consistencia */
+}
+
+/* MENÚ RESPONSIVE */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+}
+
+/* IDIOMAS */
+.idioma {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.idioma a {
+    text-decoration: none;
+    color: #5c4537;
+    margin: 0 5px;
+}
+
+.idioma a:hover {
+    text-decoration: underline;
+}
+
+/* Sección principal con video */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#videoFondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+/* Estilos para la imagen del overlay */
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.marca {
+    width: 200px; /* Ajusta el tamaño según sea necesario */
+    max-width: 80%;
+    height: auto;
+    opacity: 0.9; /* Transparencia opcional */
+}
+
+/*Nosotros*/
+.nosotros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 10%;
+    background-color: #ffffff;
+}
+
+.nosotros-contenedor {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.nosotros-texto {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.nosotros-texto h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.nosotros-texto p {
+    font-size: 1rem;
+    color: #444;
+    text-align: justify;
+}
+
+.nosotros-imagen {
+    flex: 1;
+    text-align: right;
+}
+
+.nosotros-imagen img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Sección de productos */
+.productos {
+    background-color: #f5f1eb; /* Mantiene el fondo original */
+    padding: 60px 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.productos-contenedor {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.productos-texto {
+    flex: 1;
+    text-align: center;
+    padding-right: 36px;
+}
+
+.productos-texto h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.boton-galeria {
+    display: inline-block;
+    background-color: #d15526;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+    border: none;
+    font-size: 1.2rem;
+}
+
+.boton-galeria:hover {
+    background-color: #b3451e;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .productos-texto h2 {
+        font-size: 2rem;
+    }
+
+    .boton-galeria {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .productos-texto h2 {
+        font-size: 1.8rem;
+    }
+
+    .boton-galeria {
+        font-size: 0.9rem;
+        padding: 8px 18px;
+    }
+}
+
+/* Contenedor individual para cada producto */
+.producto {
+    background: #fff; /* Color de fondo original */
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega sombra para destacar los contenedores */
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.producto:hover {
+    transform: scale(1.02);
+}
+
+.producto img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.producto-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.producto-info h3 {
+    font-size: 1.8rem;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.producto-info p {
+    font-size: 1.2rem;
+    color: #444;
+    text-align: center;
+}
+
+/* Ajustes responsive */
+@media (max-width: 1024px) {
+    .productos-contenedor {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .productos-texto {
+        margin-bottom: 20px;
+    }
+
+    .productos-lista {
+        width: 100%;
+    }
+
+    .producto {
+        flex-direction: column;
+        text-align: center;
+        width: 90%;
+        margin: 0 auto 20px;
+    }
+
+    .producto img {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    .productos {
+        padding: 30px 5%;
+    }
+
+    .productos-texto h2 {
+        font-size: 2rem;
+    }
+
+    .producto-info h3 {
+        font-size: 1.6rem;
+    }
+
+    .producto-info p {
+        font-size: 1rem;
+    }
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    .productos {
+        padding: 30px 5%;
+    }
+
+    .productos-texto h2 {
+        font-size: 2rem;
+    }
+
+    .producto-info h3 {
+        font-size: 1.6rem;
+    }
+
+    .producto-info p {
+        font-size: 1rem;
+    }
+}
+
+/* PROCESOS */
+.procesos {
+    text-align: center;
+    padding: 50px 5%;
+    background-color: #fff;
+}
+
+.procesos h2 {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.procesos-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.proceso {
+    background: #f5f1eb;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.proceso img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.proceso h3 {
+    font-size: 1.5rem;
+    color: #000;
+    margin: 10px 0;
+}
+
+.proceso p {
+    font-size: 1rem;
+    color: #444;
+    text-align: justify;
+}
+
+/* 📌 RESPONSIVE */
+@media (max-width: 768px) {
+    .procesos-contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .proceso {
+        width: 90%;
+    }
+}
+
+/*GALERIA*/
+.gallery{
+    text-decoration:solid;
+    width: 100%;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    text-align: center;
+    padding: 50px 5%;
+    background-color: #f5f1eb;
+}
+.gallery h2 {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 20px;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+#gallery-title{
+    padding-bottom: 30px;
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+    gap: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    width: 100%;
+    height: 200px; /* Altura fija para todas las imágenes */
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene el aspecto sin deformar */
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Responsividad: en móviles, 2 columnas */
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+    }
+}
+
+/* ESTADISTICAS*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: #f5f5f5;
+}
+
+.stats-section {
+    padding: 50px 20px;
+    position: relative;
+    color: black;
+}
+
+/* Fondo como marca de agua */
+.stats-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../IMG/et.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.15; /* Ajusta la opacidad para que se vea como marca de agua */
+    z-index: -1;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.stat-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.stat-item img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.stat-item p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.stat-item h3 {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Footer */
+footer {
+    background: #b8946c;
+    color: black;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+/* Estilo para el texto del copyright */
+#footer-text {
+    font-size: 0.9em;
+    margin: 0;
+    flex: 1;
+    text-align: left;
+}
+
+/* Contenedor de redes sociales */
+.social {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+/* Iconos de redes sociales */
+.social img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover en iconos */
+.social img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #footer-text {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .social {
+        justify-content: center;
+    }
+}

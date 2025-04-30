@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kata Alpaca</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/stylepro.css">
+    <link rel="icon" type="image/png" href="IMG/logo_Kat.png">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="IMG/logo_Kat.png" alt="Inicio">
+            </a>
+        </div>
+        <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+        <nav class="nav-menu" id="nav-menu">
+            <ul>
+                <li><a href="nosotros.html" id="menu-nosotros">Nosotros</a></li>
+                <li><a href="proceso.html" id="menu-proceso">Proceso</a></li>
+                <li><a href="producto.html" id="menu-productos">Producto</a></li>
+                <li><a href="compromiso.html" id="menu-compromiso">Compromiso</a></li>
+                <li><a href="contacto.html" id="menu-contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="idioma">
+            <a href="#" onclick="cambiarIdioma('en')">ENG</a> |
+            <a href="#" onclick="cambiarIdioma('es')">ESP</a>
+        </div>
+    </header>
+
+    <!-- Espaciador -->
+    <div class="espac"></div>
+
+    <!-- NUEVA sección principal con imágenes apiladas + logo -->
+    <div class="main-content-wrapper">
+        <!-- Contenedor de imágenes superpuestas -->
+        <div class="image-stack">
+            <div class="image-stack__item image-stack__item--bottom">
+                <img src="IMG/1.jpg" alt="Producto Kata Alpaca" class="stacked-img">
+            </div>
+            <div class="image-stack__item image-stack__item--top">
+                <img src="IMG/2.jpg" alt="Detalle de producto" class="stacked-img2">
+            </div>
+        </div>
+
+        <!-- Contenido de marca (derecha) -->
+        <div class="brand-content">
+            <div class="logo-placeholder">
+                <img src="IMG/logo_Kat.png" alt="Kata Alpaca">
+            </div>
+            <div class="brand-name">
+                <span class="kata">KATA</span>
+                <span class="alpaca">ALPACA</span>
+            </div>
+            <p class="slogan">la opcion ideal para tu produccion en alta calidad</p>
+        </div>
+    </div>
+
+    <!-- Sección linea dama -->
+    <section class="section-dama">
+        <div class="image-content">
+            <img src="IMG/1.jpg" alt="Línea de dama">
+            <div class="overlay-text">Línea de dama</div>
+        </div>
+        <div class="text-content">
+            <h1>Fabricamos lo que estas buscando</h1>
+            <p>Desde modelos clásicos hasta las últimas tendencias de moda...</p>
+        </div>
+    </section>
+    
+    <!-- Sección linea varones -->
+    <section class="section-dama">
+        <div class="text-content">
+            <h1>Fabricamos lo que estas buscando</h1>
+            <p>Desde modelos clásicos hasta las últimas tendencias de moda, puedes elegir de una gran variedad de
+                productos el que más se ajuste a tus necesidades.</p>
+        </div>
+        <div class="image-content">
+            <img src="IMG/6.jpg" alt="Línea de dama">
+            <div class="overlay-text">Línea de dama</div>
+        </div>
+    </section>
+
+    <!-- Sección linea accesotios -->
+    <section class="section-dama">
+        <div class="image-content">
+            <img src="IMG/1.jpg" alt="Línea de dama">
+            <div class="overlay-text">Línea de dama</div>
+        </div>
+        <div class="text-content">
+            <h1>Fabricamos lo que estas buscando</h1>
+            <p>Desde modelos clásicos hasta las últimas tendencias de moda...</p>
+        </div>
+    </section>
+    
+
+    <!-- Sección linea ruma -->
+    <section class="section-dama">
+        <div class="text-content">
+            <h1>Fabricamos lo que estas buscando</h1>
+            <p>Desde modelos clásicos hasta las últimas tendencias de moda, puedes elegir de una gran variedad de
+                productos el que más se ajuste a tus necesidades.</p>
+        </div>
+        <div class="image-content">
+            <img src="IMG/15.jpg" alt="Línea de dama">
+            <div class="overlay-text">Línea de dama</div>
+        </div>
+    </section>
+
+    <!-- Inspiración Andes -->
+    <section class="inspiration" style="background-image: url('IMG/mon.jpg');">
+        <div class="inspiration-overlay">
+            <p class="inspiration-text">Podemos desarrollar diferentes clases de productos a solicitud de nuestros
+                clientes y con nuestro know how haremos realidad todas tus ideas</p>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section id="galeria" class="gallery-section">
+        <h2 class="gallery-title">Galería</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="IMG/1.jpg" alt="Producto01"></div>
+            <div class="gallery-item"><img src="IMG/10.jpg" alt="Producto02"></div>
+            <div class="gallery-item"><img src="IMG/11.jpg" alt="Producto03"></div>
+            <div class="gallery-item"><img src="IMG/12.jpg" alt="Producto04"></div>
+            <div class="gallery-item"><img src="IMG/13.jpg" alt="Producto05"></div>
+            <div class="gallery-item"><img src="IMG/14.jpg" alt="Producto06"></div>
+            <div class="gallery-item"><img src="IMG/15.jpg" alt="Producto07"></div>
+            <div class="gallery-item"><img src="IMG/16.jpg" alt="Producto08"></div>
+            <div class="gallery-item"><img src="IMG/17.jpg" alt="Producto09"></div>
+           <!-- <div class="gallery-item"><img src="IMG/4.jpg" alt="Producto10"></div>-->
+        </div>
+    </section>
+    <!-- Catálogo -->
+    <section id="cata" class="catalog-section" style="background-image: url('IMG/hilado.jpg');">
+        <div class="catalog-info">
+            <p class="catalog-text">
+                Si deseas ver más de nuestros productos solicita nuestro catálogo a nuestro correo:
+            </p>
+            <!-- Enlace mailto simplificado -->
+            <a href="mailto:emunoz@kataalpaca.com" class="email-link">emunoz@kataalpaca.com</a>
+            
+            <!-- Botones alternativos para diferentes clientes de correo -->
+            <div class="email-options">
+                <p>O utiliza uno de estos servicios:</p>
+                <div class="email-buttons">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=emunoz@kataalpaca.com&su=Solicitud de Catálogo Kata Alpaca" target="_blank" class="email-option-btn gmail-btn">Gmail</a>
+                    <a href="https://outlook.live.com/mail/0/deeplink/compose?to=emunoz@kataalpaca.com&subject=Solicitud de Catálogo Kata Alpaca" target="_blank" class="email-option-btn outlook-btn">Outlook</a>
+                    <a href="https://compose.mail.yahoo.com/?to=emunoz@kataalpaca.com&subject=Solicitud de Catálogo Kata Alpaca" target="_blank" class="email-option-btn yahoo-btn">Yahoo</a>
+                </div>
+            </div>
+            
+            <p class="email-fallback">Si los enlaces no funcionan, copia el correo: emunoz@kataalpaca.com</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p id="footer-text">Copyright © 2025 Kata Alpaca</p>
+        <div class="social">
+            <a href="https://web.facebook.com/kataalpaca/" target="_blank" rel="noopener">
+                <img src="icono/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://instagram.com/kataalpaca" target="_blank" rel="noopener">
+                <img src="icono/instagram.png" alt="Instagram">
+            </a>
+        </div>
+    </footer>
+
+    <!-- Script idioma -->
+    <script src="JS/jscript.js"></script>
+</body>
+
+</html>

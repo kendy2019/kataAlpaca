@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kata Alpaca - Nuestro Compromiso</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/stylecom.css">
+    <link rel="icon" type="image/png" href="IMG/logo_Kat.png">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Header with navigation -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="IMG/logo_Kat.png" alt="Inicio">
+            </a>
+        </div>
+        <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+        <nav class="nav-menu" id="nav-menu">
+            <ul>
+                <li><a href="nosotros.html" id="menu-nosotros">Nosotros</a></li>
+                <li><a href="proceso.html" id="menu-proceso">Proceso</a></li>
+                <li><a href="producto.html" id="menu-productos">Producto</a></li>
+                <li><a href="compromiso.html" id="menu-compromiso">Compromiso</a></li>
+                <li><a href="contacto.html" id="menu-contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="idioma">
+            <a href="#" onclick="cambiarIdioma('en')">ENG</a> |
+            <a href="#" onclick="cambiarIdioma('es')">ESP</a>
+        </div>
+    </header>
+
+    <!-- Hero section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 id="compromiso-titulo">Nuestro Compromiso</h1>
+            <p id="compromiso-subtitulo">En Kata Alpaca, creemos en un futuro más sostenible, justo y responsable.</p>
+        </div>
+    </section>
+
+    <!-- Commitment cards section -->
+    <section class="commitment-section">
+        <div class="commitment-container">
+            <!-- Sustainability commitment card -->
+            <div class="commitment-card" id="sostenibilidad">
+                <div class="card-image">
+                    <img src="IMG/sostenibilidad.jfif" alt="Sostenibilidad">
+                </div>
+                <div class="card-content">
+                    <h2 id="sostenibilidad-titulo">Sostenibilidad</h2>
+                    <p id="sostenibilidad-texto">Nos esforzamos por reducir el impacto ambiental utilizando procesos de producción responsables y materiales ecológicos.</p>
+                    <a href="#" class="learn-more" data-target="sostenibilidad-details" data-translate="conocer-mas">Conocer más</a>
+                </div>
+            </div>
+
+            <!-- Social Responsibility commitment card -->
+            <div class="commitment-card" id="responsabilidad">
+                <div class="card-image">
+                    <img src="IMG/responsabilidad.jfif" alt="Responsabilidad Social">
+                </div>
+                <div class="card-content">
+                    <h2 id="responsabilidad-titulo">Responsabilidad Social</h2>
+                    <p id="responsabilidad-texto">Apoyamos a nuestras comunidades locales generando empleo digno y promoviendo condiciones laborales justas.</p>
+                    <a href="#" class="learn-more" data-target="responsabilidad-details" data-translate="conocer-mas">Conocer más</a>
+                </div>
+            </div>
+
+            <!-- Quality and Transparency commitment card -->
+            <div class="commitment-card" id="calidad">
+                <div class="card-image">
+                    <img src="IMG/calidad.jpg" alt="Calidad y Transparencia">
+                </div>
+                <div class="card-content">
+                    <h2 id="calidad-titulo">Calidad y Transparencia</h2>
+                    <p id="calidad-texto">Nos comprometemos a ofrecer productos textiles de alta calidad con total transparencia en cada paso de nuestra cadena de valor.</p>
+                    <a href="#" class="learn-more" data-target="calidad-details" data-translate="conocer-mas">Conocer más</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed information sections (initially hidden) -->
+    <section class="commitment-details" id="sostenibilidad-details">
+        <div class="detail-container">
+            <div class="detail-close">&times;</div>
+            <div class="detail-content">
+                <h2 id="sostenibilidad-detalle-titulo">Sostenibilidad en Kata Alpaca</h2>
+                <div class="detail-grid">
+                    <div class="detail-image">
+                        <img src="IMG/sostenibilidad.jfif" alt="Prácticas sostenibles">
+                    </div>
+                    <div class="detail-text">
+                        <h3 id="sostenibilidad-detalle-subtitulo">Nuestras Prácticas Sostenibles</h3>
+                        <p id="sostenibilidad-detalle-texto">En Kata Alpaca, la sostenibilidad no es solo una palabra, sino una filosofía que guía cada decisión que tomamos:</p>
+                        <ul>
+                            <li id="sost-1">Utilizamos técnicas de esquila respetuosas con el bienestar animal.</li>
+                            <li id="sost-2">Implementamos sistemas de ahorro de agua en nuestros procesos de lavado y teñido.</li>
+                            <li id="sost-3">Trabajamos con tintes naturales y procesos de bajo impacto ambiental.</li>
+                            <li id="sost-4">Reducimos, reutilizamos y reciclamos materiales en toda nuestra cadena de producción.</li>
+                            <li id="sost-5">Nos abastecemos localmente cuando es posible para reducir nuestra huella de carbono.</li>
+                        </ul>
+                        <p id="sost-6">Nuestro compromiso es continuar innovando para encontrar formas más sostenibles de producir textiles de alpaca de alta calidad.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="commitment-details" id="responsabilidad-details">
+        <div class="detail-container">
+            <div class="detail-close">&times;</div>
+            <div class="detail-content">
+                <h2 id="responsabilidad-detalle-titulo">Responsabilidad Social en Kata Alpaca</h2>
+                <div class="detail-grid">
+                    <div class="detail-image">
+                        <img src="IMG/responsabilidad.jfif" alt="Comunidades locales">
+                    </div>
+                    <div class="detail-text">
+                        <h3 id="responsabilidad-detalle-subtitulo">Nuestro Impacto Social</h3>
+                        <p id="responsabilidad-detalle-texto">Creemos firmemente en el poder de los negocios para generar cambios positivos en las comunidades:</p>
+                        <ul>
+                            <li id="respom-1">Pagamos salarios justos y por encima del mercado a todos nuestros colaboradores.</li>
+                            <li id="respom-2">Ofrecemos programas de capacitación y desarrollo profesional.</li>
+                            <li id="respom-3">Trabajamos directamente con más de 100 familias de criadores de alpaca en los Andes.</li>
+                            <li id="respom-4">Implementamos programas de educación y salud en las comunidades donde operamos.</li>
+                            <li id="respom-5">Promovemos la preservación cultural y las técnicas textiles tradicionales.</li>
+                        </ul>
+                        <p id="respom-6">Al elegir Kata Alpaca, estás apoyando directamente el desarrollo económico sostenible de comunidades andinas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="commitment-details" id="calidad-details">
+        <div class="detail-container">
+            <div class="detail-close">&times;</div>
+            <div class="detail-content">
+                <h2 id="calidad-detalle-titulo">Calidad y Transparencia en Kata Alpaca</h2>
+                <div class="detail-grid">
+                    <div class="detail-image">
+                        <img src="IMG/calidad.jpg" alt="Control de calidad">
+                    </div>
+                    <div class="detail-text">
+                        <h3 id="calidad-detalle-subtitulo">Nuestros Estándares de Excelencia</h3>
+                        <p id="calidad-detalle-texto">La calidad y transparencia son los pilares fundamentales de nuestra marca:</p>
+                        <ul>
+                            <li id="cali-1">Seleccionamos cuidadosamente cada fibra de alpaca según su finura y textura.</li>
+                            <li id="cali-2">Realizamos rigurosos controles de calidad en cada etapa de producción.</li>
+                            <li id="cali-3">Documentamos y compartimos toda nuestra cadena de suministro.</li>
+                            <li id="cali-4">Asignamos un código QR a cada producto para rastrear su origen.</li>
+                            <li id="cali-5">Invitamos a nuestros clientes a visitar nuestras instalaciones y conocer nuestro proceso.</li>
+                        </ul>
+                        <p id="cali-6">Nuestra transparencia es nuestro sello distintivo, porque creemos que tienes derecho a saber exactamente cómo se fabrican nuestros productos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p id="footer-text">Copyright © 2025 Kata Alpaca</p>
+        <div class="social">
+            <a href="https://web.facebook.com/kataalpaca/" target="_blank" rel="noopener">
+                <img src="icono/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://instagram.com/kataalpaca" target="_blank" rel="noopener">
+                <img src="icono/instagram.png" alt="Instagram">
+            </a>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="JS/jscript.js"></script>
+</body>
+</html>

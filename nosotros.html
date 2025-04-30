@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kata Alpaca</title>
+    
+    <!-- Agrega Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="CSS/stylenos.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="IMG/logo_Kat.png">
+    
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+
+    <!-- Menú de navegación fijo -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="IMG/logo_Kat.png" alt="Inicio">
+            </a>
+        </div>
+        <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+        <nav class="nav-menu" id="nav-menu">
+            <ul>
+                <li><a href="nosotros.html" id="menu-nosotros">Nosotros</a></li>
+                <li><a href="proceso.html" id="menu-proceso">Proceso</a></li>
+                <li><a href="producto.html" id="menu-productos">Producto</a></li>
+                <li><a href="compromiso.html" id="menu-compromiso">Compromiso</a></li>
+                <li><a href="contacto.html" id="menu-contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="idioma">
+            <a href="#" onclick="cambiarIdioma('en')">ENG</a> |
+            <a href="#" onclick="cambiarIdioma('es')">ESP</a>
+        </div>
+    </header>
+
+   
+
+        <section class="hero">
+            <img src="IMG/portada_nos.jpg" alt="Historia de la empresa" class="img-fluid">
+        </section>
+
+
+    <!-- Sección Historia -->
+<section class="seccion historia">
+    <div class="container">
+        <div class="imagen">
+            <img src="IMG/alpacas_nos.jpg" alt="Historia de la empresa">
+        </div>
+        <div class="texto">
+            <h1>Nuestra Historia</h1>
+            <p>
+                Kata Alpaca nace con la misión de ofrecer productos de alta calidad hechos de alpaca. 
+                Desde nuestros inicios, nos hemos comprometido con el desarrollo sostenible, 
+                brindando empleo a artesanos locales y promoviendo la tradición textil del Perú.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Sección Empresa -->
+<section class="seccion empresa">
+    <div class="container">
+        <div class="texto">
+            <h1>Nuestra Empresa</h1>
+            <p>
+                Somos una empresa fundada hace más de 25 años en la ciudad de Arequipa. 
+                Iniciamos haciendo servicios a empresas líderes del rubro textil alpaquero 
+                en el año 1991, una experiencia que nos permitió aprender técnicas de producción 
+                y a manejar un alto control de calidad para cumplir con los altos estándares de 
+                estas empresas.
+            </p>
+        </div>
+        <div class="imagen">
+            <img src="IMG/alpa_nos02.jpg" alt="Imagen de la empresa">
+        </div>
+    </div>
+</section>
+
+<!-- Sección Misión y Visión -->
+<section class="vi_mision">
+    <div class="container text-center mt-5">
+        <div class="row justify-content-center">
+            <!-- Tarjeta Misión -->
+            <div class="col-md-5">
+                <div class="card custom-card">
+                    <div class="card-top green">
+                        <img src="IMG/alpacas.png" alt="Misión" class="icon">
+                    </div>
+                    <div class="card-body">
+                        <h3>MISIÓN</h3>
+                        <p>Somos una empresa textil que genera productos de alta calidad adecuándonos a 
+                            las necesidades de nuestros clientes.<br>Brindamos distinción, comodidad y 
+                            estilo mediante finas prendas elaboradas con fibras naturales. Contribuimos a 
+                            la generación de fuentes de empleo y mejoramiento de la calidad de vida de 
+                            nuestra comunidad.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta Visión -->
+            <div class="col-md-5">
+                <div class="card custom-card">
+                    <div class="card-top blue">
+                        <img src="IMG/alpacas.png" alt="Visión" class="icon">
+                    </div>
+                    <div class="card-body">
+                        <h3>VISIÓN</h3>
+                        <p>Convertirnos en una importante opción en la producción y comercialización
+                             responsable de productos textiles elaborados con fibras naturales de manera 
+                             sostenible, siendo reconocidos por nuestra calidad, precio, eficiencia, 
+                             innovación y nuestro compromiso con el desarrollo de nuestra comunidad.
+                             <br><br></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- Footer con redes sociales -->
+    <footer>
+        <p id="footer-text">Copyright © 2025 Kata Alpaca</p>
+        <div class="social">
+            <a href="https://web.facebook.com/kataalpaca/" target="_blank" rel="noopener">
+                <img src="icono/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://instagram.com/kataalpaca" target="_blank" rel="noopener">
+                <img src="icono/instagram.png" alt="Instagram">
+            </a>
+        </div>
+    </footer>
+
+    <!-- Script para menú responsive -->
+  
+    <script src="JS/jscript.js"></script>
+</body>
+</html>
