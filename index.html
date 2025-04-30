@@ -6,6 +6,7 @@
     <title>Kata Alpaca</title>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/animations.css">
     <link rel="icon" type="image/png" href="IMG/logo_Kat.png">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
@@ -22,10 +23,10 @@
         <nav class="nav-menu" id="nav-menu">
             <ul>
                 <li><a href="nosotros.html" id="menu-nosotros">Nosotros</a></li>
-                <li><a href="proceso.html" id="menu-proceso">Proceso</a></li>
-                <li><a href="producto.html" id="menu-productos">Producto</a></li>
-                <li><a href="compromiso.html" id="menu-compromiso">Compromiso</a></li>
-                <li><a href="contacto.html" id="menu-contacto">Contacto</a></li>
+                <li><a href="proceso.html" id="menu-proceso">Proceso | Process</a></li>
+                <li><a href="producto.html" id="menu-productos">Producto | Product</a></li>
+                <li><a href="compromiso.html" id="menu-compromiso">Compromiso | Commitment</a></li>
+                <li><a href="contacto.html" id="menu-contacto">Contacto | Contact</a></li>
             </ul>
         </nav>
         <div class="idioma">
@@ -43,6 +44,19 @@
             <img src="IMG/alpacas.png" alt="Kata Alpaca" class="marca">
         </div>
     </div>
+
+    <!-- NUEVA SECCIÓN DE INTRODUCCIÓN -->
+    <section class="introduccion">
+        <div class="container">
+            <div class="text-section">
+                <p id="intro-texto1">En Kata Alpaca nos especializamos en la fabricación de prendas en tejido de punto fabricados 100% en Perú con las fibras naturales más finas.</p>
+                <p id="intro-texto2">Como fabricantes, nosotros ofrecemos una amplia gama de opciones para nuestros clientes. Nuestro know how nos permite crear soluciones únicas, eficaces e innovadoras para sus productos.</p>
+            </div>
+            <div class="image-section">
+                <img src="IMG/5.jpg" alt="Etiqueta de producto Kata Alpaca">
+            </div>
+        </div>
+    </section>
 
     <!-- NOSOTROS -->
     <section class="nosotros">
@@ -66,25 +80,20 @@
             </div>
             <div class="productos-lista">
                 <div class="producto">
-                    <img src="IMG/linea_dama.jpg" alt="Línea de dama">
-                    <div class="producto-info">
-                        <h3 id="productos-dama">Línea de dama</h3>
-                        <p id="productos-dama-desc">Descubre destinos que no te puedes perder.</p>
-                    </div>
+                    <img src="IMG/para_el.jpg" alt="Para él">
+                    <p>PARA ÉL</p>
                 </div>
                 <div class="producto">
-                    <img src="IMG/linea_varon.jpg" alt="Línea de varón">
-                    <div class="producto-info">
-                        <h3 id="productos-varon">Línea de varón</h3>
-                        <p id="productos-varon-desc">Disfruta de un viaje sin complicaciones con estos consejos antes, durante y después del viaje.</p>
-                    </div>
+                    <img src="IMG/para_ella.jpg" alt="Para ella">
+                    <p>PARA ELLA</p>
                 </div>
                 <div class="producto">
                     <img src="IMG/accesorios.jpg" alt="Accesorios">
-                    <div class="producto-info">
-                        <h3 id="productos-accesorios">Accesorios</h3>
-                        <p id="productos-accesorios-desc">Aprovecha al máximo tus vacaciones disfrutando de itinerarios únicos.</p>
-                    </div>
+                    <p>ACCESORIOS</p>
+                </div>
+                <div class="producto">
+                    <img src="IMG/ponchos_ruanas.jpg" alt="Ponchos y ruanas">
+                    <p>PONCHOS Y RUANAS</p>
                 </div>
             </div>
         </div>
@@ -168,7 +177,8 @@
         </div>
     </footer>
 
-    <!-- Script para cambio de idioma -->
+    <!-- Scripts -->
     <script src="JS/jscript.js"></script>
-</body>
+    <script src="JS/animations.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93889b6d3ac3677d',t:'MTc0NjAzMjU1MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>

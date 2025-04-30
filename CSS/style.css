@@ -151,6 +151,125 @@ nav ul li a.active {
     opacity: 0.9; /* Transparencia opcional */
 }
 
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.text-section {
+  flex: 1;
+  min-width: 300px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.image-section {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.image-section img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .text-section {
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  .image-section img {
+    max-width: 100%;
+  }
+}
+
+
+/* NUEVA SECCIÓN DE INTRODUCCIÓN */
+.introduccion {
+    background-color: #ffffff;
+    padding: 80px 0 40px 0;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.text-section {
+    flex: 1;
+    min-width: 300px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.text-section p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.image-section {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.image-section img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .text-section {
+        font-size: 16px;
+        text-align: justify;
+    }
+    
+    .image-section {
+        margin-top: 20px;
+    }
+
+    .image-section img {
+        max-width: 100%;
+    }
+}
+
+
 /*Nosotros*/
 .nosotros {
     display: flex;
@@ -198,7 +317,7 @@ nav ul li a.active {
 
 /* Sección de productos */
 .productos {
-    background-color: #f5f1eb; /* Mantiene el fondo original */
+    background-color: #f5f1eb;
     padding: 60px 10%;
     display: flex;
     justify-content: center;
@@ -206,15 +325,15 @@ nav ul li a.active {
 
 .productos-contenedor {
     display: flex;
+    flex-direction: column;
     max-width: 1200px;
     width: 100%;
     align-items: center;
-    justify-content: space-between;
 }
+
 .productos-texto {
-    flex: 1;
     text-align: center;
-    padding-right: 36px;
+    margin-bottom: 40px;
 }
 
 .productos-texto h2 {
@@ -242,6 +361,44 @@ nav ul li a.active {
     transform: scale(1.05);
 }
 
+/* Contenedor de productos en una fila horizontal */
+.productos-lista {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+/* Contenedor individual para cada producto */
+.producto {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, border 0.3s;
+    width: 23%; /* Ajustado para 4 productos en una fila */
+    text-align: center;
+}
+
+.producto:hover {
+    transform: scale(1.02);
+    border: 3px solid #a64aff; /* Borde morado al hacer hover */
+}
+
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.producto p {
+    font-size: 1.2rem;
+    color: #444;
+    padding: 10px;
+    margin: 0;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
     .productos-texto h2 {
@@ -252,9 +409,17 @@ nav ul li a.active {
         font-size: 1rem;
         padding: 10px 20px;
     }
+
+    .producto {
+        width: 48%; /* 2 productos por fila */
+    }
 }
 
 @media (max-width: 768px) {
+    .productos {
+        padding: 30px 5%;
+    }
+
     .productos-texto h2 {
         font-size: 1.8rem;
     }
@@ -263,115 +428,9 @@ nav ul li a.active {
         font-size: 0.9rem;
         padding: 8px 18px;
     }
-}
-
-/* Contenedor individual para cada producto */
-.producto {
-    background: #fff; /* Color de fondo original */
-    padding: 15px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega sombra para destacar los contenedores */
-    margin-bottom: 20px;
-    transition: transform 0.3s;
-}
-
-.producto:hover {
-    transform: scale(1.02);
-}
-
-.producto img {
-    width: 130px;
-    height: 130px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-right: 20px;
-}
-
-.producto-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.producto-info h3 {
-    font-size: 1.8rem;
-    color: #000;
-    font-weight: bold;
-    margin-bottom: 8px;
-    text-align: center;
-}
-
-.producto-info p {
-    font-size: 1.2rem;
-    color: #444;
-    text-align: center;
-}
-
-/* Ajustes responsive */
-@media (max-width: 1024px) {
-    .productos-contenedor {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .productos-texto {
-        margin-bottom: 20px;
-    }
-
-    .productos-lista {
-        width: 100%;
-    }
 
     .producto {
-        flex-direction: column;
-        text-align: center;
-        width: 90%;
-        margin: 0 auto 20px;
-    }
-
-    .producto img {
-        margin-bottom: 10px;
-        margin-right: 0;
-    }
-}
-
-/* Ajustes para móviles */
-@media (max-width: 768px) {
-    .productos {
-        padding: 30px 5%;
-    }
-
-    .productos-texto h2 {
-        font-size: 2rem;
-    }
-
-    .producto-info h3 {
-        font-size: 1.6rem;
-    }
-
-    .producto-info p {
-        font-size: 1rem;
-    }
-}
-
-/* Ajustes para móviles */
-@media (max-width: 768px) {
-    .productos {
-        padding: 30px 5%;
-    }
-
-    .productos-texto h2 {
-        font-size: 2rem;
-    }
-
-    .producto-info h3 {
-        font-size: 1.6rem;
-    }
-
-    .producto-info p {
-        font-size: 1rem;
+        width: 100%; /* 1 producto por fila */
     }
 }
 
@@ -630,5 +689,484 @@ footer {
     
     .social {
         justify-content: center;
+    }
+}
+
+/* animations_enhanced.css - Estilos para las animaciones mejoradas */
+
+/* Base para animaciones de secciones */
+.animated-section {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animated-section.visible {
+    opacity: 1;
+}
+
+/* Base para animaciones de elementos individuales */
+.animate-item {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-item.visible {
+    opacity: 1;
+}
+
+/* Efectos de transición para secciones */
+
+/* Fade In - Desvanecer */
+.fade-in {
+    opacity: 0;
+}
+.fade-in.visible {
+    opacity: 1;
+}
+
+/* Slide Up - Deslizar hacia arriba */
+.slide-up {
+    transform: translateY(50px);
+}
+.slide-up.visible {
+    transform: translateY(0);
+}
+
+/* Slide Right - Deslizar desde la derecha */
+.slide-right {
+    transform: translateX(-50px);
+}
+.slide-right.visible {
+    transform: translateX(0);
+}
+
+/* Slide Left - Deslizar desde la izquierda */
+.slide-left {
+    transform: translateX(50px);
+}
+.slide-left.visible {
+    transform: translateX(0);
+}
+
+/* Zoom In - Efecto zoom */
+.zoom-in {
+    transform: scale(0.90);
+}
+.zoom-in.visible {
+    transform: scale(1);
+}
+
+/* Rotate In - Rotación suave */
+.rotate-in {
+    transform: rotate(-5deg) translateY(30px);
+    opacity: 0;
+}
+.rotate-in.visible {
+    transform: rotate(0) translateY(0);
+    opacity: 1;
+}
+
+/* Bounce In - Efecto rebote */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.bounce-in {
+    opacity: 0;
+}
+.bounce-in.visible {
+    animation: bounceIn 0.8s ease-out forwards;
+}
+
+/* Transiciones entre páginas */
+body {
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.page-transition-out {
+    opacity: 0;
+}
+
+.page-transition-in {
+    animation: fadeInPage 1s ease-out forwards;
+}
+
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* animations_enhanced.css - Estilos para las animaciones mejoradas */
+
+/* Base para animaciones de secciones */
+.animated-section {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animated-section.visible {
+    opacity: 1;
+}
+
+/* Base para animaciones de elementos individuales */
+.animate-item {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-item.visible {
+    opacity: 1;
+}
+
+/* Efectos de transición para secciones */
+
+/* Fade In - Desvanecer */
+.fade-in {
+    opacity: 0;
+}
+.fade-in.visible {
+    opacity: 1;
+}
+
+/* Slide Up - Deslizar hacia arriba */
+.slide-up {
+    transform: translateY(50px);
+}
+.slide-up.visible {
+    transform: translateY(0);
+}
+
+/* Slide Right - Deslizar desde la derecha */
+.slide-right {
+    transform: translateX(-50px);
+}
+.slide-right.visible {
+    transform: translateX(0);
+}
+
+/* Slide Left - Deslizar desde la izquierda */
+.slide-left {
+    transform: translateX(50px);
+}
+.slide-left.visible {
+    transform: translateX(0);
+}
+
+/* Zoom In - Efecto zoom */
+.zoom-in {
+    transform: scale(0.90);
+}
+.zoom-in.visible {
+    transform: scale(1);
+}
+
+/* Rotate In - Rotación suave */
+.rotate-in {
+    transform: rotate(-5deg) translateY(30px);
+    opacity: 0;
+}
+.rotate-in.visible {
+    transform: rotate(0) translateY(0);
+    opacity: 1;
+}
+
+/* Bounce In - Efecto rebote */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.bounce-in {
+    opacity: 0;
+}
+.bounce-in.visible {
+    animation: bounceIn 0.8s ease-out forwards;
+}
+
+/* Transiciones entre páginas */
+body {
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.page-transition-out {
+    opacity: 0;
+}
+
+.page-transition-in {
+    animation: fadeInPage 1s ease-out forwards;
+}
+
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animaciones para elementos específicos */
+
+/* Hero section */
+.hero .overlay {
+    opacity: 0;
+    transform: scale(0.9) translateY(30px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.hero.active .overlay {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+/* Video de fondo con efecto */
+#videoFondo {
+    transition: filter 1.5s ease-out, transform 1.5s ease-out;
+    filter: brightness(0.7) blur(8px);
+    transform: scale(1.05);
+}
+
+.hero.active #videoFondo {
+    filter: brightness(1) blur(0);
+    transform: scale(1);
+}
+
+/* Menú de navegación con efecto */
+header {
+    transition: background 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+header.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 12px 50px;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(0);
+}
+
+/* Efecto para productos */
+.producto {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    will-change: transform, box-shadow;
+}
+
+.producto:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Efecto para procesos */
+.proceso {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    will-change: transform, box-shadow;
+}
+
+.proceso:hover {
+    transform: translateY(-8px) rotate(1deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Efecto para galería */
+.gallery-item {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    overflow: hidden;
+    will-change: transform, box-shadow;
+}
+
+.gallery-item img {
+    transition: transform 0.8s ease;
+    will-change: transform;
+}
+
+.gallery-item:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.15);
+}
+
+/* Efecto para estadísticas */
+.stat-item {
+    transition: transform 0.5s ease, box-shadow 0.5s ease, background-color 0.5s ease;
+    will-change: transform, box-shadow;
+}
+
+.stat-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    background-color: #fff5ea;
+}
+
+.stat-item h3 {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.stat-item:hover h3 {
+    color: #d15526;
+    transform: scale(1.1);
+}
+
+/* Efecto para botones */
+.boton-galeria {
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.boton-galeria:hover {
+    background-color: #b3451e;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(209, 85, 38, 0.3);
+}
+
+.boton-galeria::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.6s ease;
+}
+
+.boton-galeria:hover::after {
+    opacity: 1;
+    transform: rotate(45deg) translate(50%, 50%);
+}
+
+/* Efecto para menú de navegación */
+nav ul li a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background-color: #8c6f54;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Efecto parallax para elementos con la clase .parallax */
+.parallax {
+    will-change: transform;
+}
+
+/* Animación para texto en las secciones */
+@keyframes textWave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.text-wave h1,
+.text-wave h2,
+.text-wave h3 {
+    animation: textWave 3s ease-in-out infinite;
+}
+
+/* Animación para imágenes */
+@keyframes imagePulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+.nosotros-imagen img:hover,
+.image-section img:hover,
+.proceso img:hover {
+    animation: imagePulse 2s ease-in-out infinite;
+}
+
+/* Animación para el logo */
+.logo img {
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.logo a:hover img {
+    transform: scale(1.1) rotate(5deg);
+    filter: brightness(1.1);
+}
+
+/* Transición para el footer */
+footer {
+    transition: background-color 0.4s ease, transform 0.4s ease;
+}
+
+footer:hover {
+    background-color: #a38055;
+}
+
+/* Animaciones responsivas */
+@media (max-width: 768px) {
+    .animated-section {
+        transform: translateY(15px);
+    }
+    
+    .animate-item {
+        transform: translateY(10px);
+    }
+    
+    /* Ajustes para animaciones en móviles */
+    .bounce-in.visible {
+        animation-duration: 0.6s;
+    }
+    
+    .rotate-in {
+        transform: rotate(-3deg) translateY(20px);
     }
 }
