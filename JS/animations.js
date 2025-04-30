@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         section.classList.add('animated-section');
         
         // Para elementos dentro de cada sección, distribuye efectos variados
-        const elementsToAnimate = section.querySelectorAll('h1, h2, h3, p, img, .producto, .proceso, .gallery-item, .stat-item');
+        const elementsToAnimate = section.querySelectorAll('h1, h2, h3, p, img, .producto, .proceso, .gallery-item, .stat-item, .butterfly');
         elementsToAnimate.forEach((element, elementIndex) => {
             // Distribuye diferentes efectos para los subelementos
             const subEffectIndex = (index + elementIndex) % animationEffects.length;
@@ -38,8 +38,48 @@ document.addEventListener('DOMContentLoaded', function() {
             element.classList.add('animate-item');
             
             // Añade retraso progresivo basado en el índice del elemento
-            element.style.transitionDelay = `${elementIndex * 0.1}s`;
+            element.style.transitionDelay = `${elementIndex * 0.2}s`; // Aumentado a 0.2s para un efecto más notable
         });
+
+        // Asegurarse de que los elementos de .productos tengan un efecto específico
+        if (section.classList.contains('productos')) {
+            const productosItems = section.querySelectorAll('.producto');
+            productosItems.forEach((item, itemIndex) => {
+                item.classList.add('zoom-in'); // Efecto específico para productos
+                item.classList.add('animate-item');
+                item.style.transitionDelay = `${itemIndex * 0.3}s`; // Retraso progresivo más pronunciado
+            });
+        }
+
+        // Asegurarse de que las mariposas de .nosotros tengan un efecto específico
+        if (section.classList.contains('nosotros')) {
+            const butterflies = section.querySelectorAll('.butterfly');
+            butterflies.forEach((butterfly, butterflyIndex) => {
+                butterfly.classList.add('fade-in');
+                butterfly.classList.add('animate-item');
+                butterfly.style.transitionDelay = `${butterflyIndex * 0.5}s`;
+            });
+        }
+
+        // Animación específica para .tradicion
+        if (section.classList.contains('tradicion')) {
+            const tradicionElements = section.querySelectorAll('h2, p');
+            tradicionElements.forEach((element, elementIndex) => {
+                element.classList.add('fade-in');
+                element.classList.add('animate-item');
+                element.style.transitionDelay = `${elementIndex * 0.3}s`;
+            });
+        }
+
+        // Animación específica para .transmision
+        if (section.classList.contains('transmision')) {
+            const transmisionElements = section.querySelectorAll('.transmision-texto, .transmision-imagen');
+            transmisionElements.forEach((element, elementIndex) => {
+                element.classList.add(elementIndex === 0 ? 'slide-right' : 'slide-left');
+                element.classList.add('animate-item');
+                element.style.transitionDelay = `${elementIndex * 0.3}s`;
+            });
+        }
     });
     
     // Función que se ejecuta cuando una sección entra en el viewport
@@ -57,11 +97,26 @@ document.addEventListener('DOMContentLoaded', function() {
                         el.classList.add('visible');
                     }, 100 * index); // Aplica un retraso progresivo a cada elemento
                 });
-            } else {
-                // Opcional: reset de animaciones cuando salen del viewport
-                // entry.target.classList.remove('visible');
-                // const animatedElements = entry.target.querySelectorAll('.animate-item');
-                // animatedElements.forEach(el => el.classList.remove('visible'));
+
+                // Si es la sección productos, aplicar animación adicional
+                if (entry.target.classList.contains('productos')) {
+                    const productosItems = entry.target.querySelectorAll('.producto');
+                    productosItems.forEach((item, index) => {
+                        setTimeout(() => {
+                            item.classList.add('visible');
+                        }, 200 * index); // Retraso más largo para un efecto escalonado
+                    });
+                }
+
+                // Si es la sección nosotros, animar las mariposas
+                if (entry.target.classList.contains('nosotros')) {
+                    const butterflies = entry.target.querySelectorAll('.butterfly');
+                    butterflies.forEach((butterfly, index) => {
+                        setTimeout(() => {
+                            butterfly.classList.add('visible');
+                        }, 300 * index); // Retraso para las mariposas
+                    });
+                }
             }
         });
     }, options);
@@ -71,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
         sectionObserver.observe(section);
     });
     
-    // Animación especial para el hero
+    // Animación especial para el hero (se ejecuta al cargar la página)
     const hero = document.querySelector('.hero');
     if (hero) {
         setTimeout(() => {
@@ -176,4 +231,24 @@ if (statsSection) {
     }, { threshold: 0.5 });
     
     statsObserver.observe(statsSection);
+}
+
+// Animación específica para .compromiso
+if (section.classList.contains('compromiso')) {
+    const compromisoItems = section.querySelectorAll('.compromiso-item');
+    compromisoItems.forEach((item, itemIndex) => {
+        item.classList.add('fade-in'); // Efecto específico para cada tarjeta
+        item.classList.add('animate-item');
+        item.style.transitionDelay = `${itemIndex * 0.3}s`; // Retraso progresivo
+    });
+}
+
+// Si es la sección compromiso, animar los items
+if (entry.target.classList.contains('compromiso')) {
+    const compromisoItems = entry.target.querySelectorAll('.compromiso-item');
+    compromisoItems.forEach((item, index) => {
+        setTimeout(() => {
+            item.classList.add('visible');
+        }, 200 * index); // Retraso escalonado
+    });
 }
