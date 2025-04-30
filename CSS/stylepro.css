@@ -298,49 +298,37 @@
     width: 100%;
   }
   
-  .gallery-title {
-    font-size: 36px;
-    color: #5c4537;
-    margin-bottom: 20px;
-    font-weight: bold;
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
   }
   
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 250px;
-    gap: 5px;
-    width: 100%;
-    padding: 0 5px;
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 16.66%;
+    max-width: 16.66%;
+    padding: 0 4px;
   }
   
-  .gallery-item {
-    overflow: hidden;
-    position: relative;
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
   }
   
-  .gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease;
-  }
-  
-  .gallery-item:hover img {
-    transform: scale(1.05);
-  }
-  
-  /* Responsive para la galería */
-  @media (max-width: 768px) {
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
     }
   }
   
-  @media (max-width: 480px) {
-    .gallery-grid {
-        grid-template-columns: 1fr;
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
     }
   }
   
