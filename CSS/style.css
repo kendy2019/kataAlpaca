@@ -118,7 +118,7 @@ nav ul li a.active {
     text-decoration: underline;
 }
 
-/* Sección principal con video */
+/* Sección principal con imagen */
 .hero {
     position: relative;
     width: 100%;
@@ -126,33 +126,12 @@ nav ul li a.active {
     overflow: hidden;
 }
 
-#videoFondo {
-    position: absolute;
-    top: 0;
-    left: 0;
+.hero-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1;
+    display: block;
 }
-
-/* Estilos para la imagen del overlay */
-.overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.marca {
-    width: 20vw;
-    min-width: 200px;
-    max-width: 80%;
-    height: auto;
-    opacity: 0.9;
-}
-
 /* NUEVA SECCIÓN DE INTRODUCCIÓN */
 .introduccion {
     background-color: #ffffff;
@@ -404,45 +383,49 @@ nav ul li a.active {
 .tradicion {
     position: relative;
     padding: 8vw 5%;
-    background: url('../IMG/montana.jpg') no-repeat center center;
+    background: url('../IMG/mon.jpg') no-repeat center center;
     background-size: cover;
-    background-attachment: fixed; /* Parallax effect on larger screens */
+    background-attachment: fixed;
     color: white;
     text-align: center;
-    min-height: 50vh; /* Ensure section has enough height */
-    height:1000px;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .tradicion-contenedor {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 5vw;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    padding: 3vw 5vw;
     border-radius: 10px;
-    max-width: 80%;
+    max-width: 800px;
     margin: 0 auto;
-    margin-top: 50px;
 }
 
 .tradicion-contenedor h2 {
     font-size: clamp(24px, 3vw, 40px);
     margin-bottom: 2vw;
     font-weight: bold;
+    color: white;
 }
 
 .tradicion-contenedor p {
     font-size: clamp(16px, 1.5vw, 20px);
     line-height: 1.6;
+    font-style: italic;
+    color: white;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     .tradicion {
         padding: 10vw 5%;
-        background-attachment: scroll; /* Disable parallax on mobile for better performance */
+        background-attachment: scroll;
         min-height: 40vh;
     }
 
     .tradicion-contenedor {
-        padding: 5vw;
+        padding: 6vw 5vw;
         max-width: 90%;
     }
 
@@ -463,7 +446,6 @@ nav ul li a.active {
     padding: 5vw 5%;
     background-color: #b8946c;
 }
-    
 
 .transmision-contenedor {
     display: flex;
@@ -789,18 +771,29 @@ nav ul li a.active {
     }
 }
 
-
 /* COMPROMISO */
 .compromiso {
     padding: 5vw 5%;
     text-align: center;
-    background-color: #f5f1eb; /* Fondo similar a otras secciones */
+    background: url('../IMG/montana.jpg') center/cover no-repeat;
+    position: relative;
+    z-index: 0;
+}
+
+.compromiso::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.473); /* capa blanca semitransparente */
+    z-index: -1;
 }
 
 .compromiso h2 {
     font-size: clamp(24px, 3vw, 40px);
     color: #000;
     margin-bottom: 2vw;
+    position: relative;
+    z-index: 1;
 }
 
 .compromiso-contenedor {
@@ -809,56 +802,63 @@ nav ul li a.active {
     gap: 2vw;
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .compromiso-item {
     background: white;
     padding: 2vw;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .compromiso-item:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 .compromiso-item img {
-    width: 6vw;
-    min-width: 60px;
-    margin-bottom: 1vw;
+    width: 50px;
+    margin: 0 auto 15px;
+    display: block;
 }
 
 .compromiso-item h3 {
     font-size: clamp(16px, 1.5vw, 20px);
-    color: #d15526; /* Color que coincide con el estilo del sitio */
-    margin-bottom: 1vw;
+    color: #d15526;
+    margin-bottom: 10px;
 }
 
 .compromiso-item p {
     font-size: clamp(12px, 1.2vw, 16px);
     color: #444;
-    text-align: justify;
+    text-align: center;
+    line-height: 1.5;
 }
 
-/* Responsive */
+/* Responsive para móviles */
 @media (max-width: 768px) {
     .compromiso-contenedor {
         grid-template-columns: 1fr;
+        gap: 5vw;
+    }
+
+    .compromiso-item {
+        padding: 6vw 5vw;
     }
 
     .compromiso-item img {
-        width: 10vw;
-        min-width: 50px;
+        width: 60px;
     }
 
     .compromiso-item h3 {
-        font-size: clamp(14px, 2.5vw, 18px);
+        font-size: 18px;
     }
 
     .compromiso-item p {
-        font-size: clamp(12px, 2vw, 14px);
+        font-size: 14px;
     }
 }
 
@@ -868,6 +868,8 @@ nav ul li a.active {
     padding: 5vw 5%;
     position: relative;
     color: black;
+    background: url('../IMG/mon.jpg') no-repeat center center;
+    background-size: cover;
 }
 
 /* Fondo como marca de agua */
@@ -878,7 +880,6 @@ nav ul li a.active {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../IMG/et.jpg') no-repeat center center;
     background-size: cover;
     opacity: 0.15;
     z-index: -1;
@@ -1128,17 +1129,6 @@ body {
 .hero.active .overlay {
     opacity: 1;
     transform: scale(1) translateY(0);
-}
-
-#videoFondo {
-    transition: filter 1.5s ease-out, transform 1.5s ease-out;
-    filter: brightness(0.7) blur(8px);
-    transform: scale(1.05);
-}
-
-.hero.active #videoFondo {
-    filter: brightness(1) blur(0);
-    transform: scale(1);
 }
 
 header {

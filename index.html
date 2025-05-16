@@ -4,74 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kata Alpaca</title>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/animations.css">
-    <link rel="icon" type="image/png" href="IMG/logo_Kat.png">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-    <!-- Botón para cambiar idioma -->
     <header>
         <div class="logo">
-            <a href="index.html" id="menu-logo" class="active">
-                <img src="IMG/logo_Kat.png" alt="Inicio">
-            </a>
+            <a href="#"><img src="IMG/logo_Kat.png" alt="Kata Alpaca Logo"></a>
         </div>
-        <button class="menu-toggle" id="menu-toggle">☰</button>
+
+        <button class="menu-toggle" id="menu-toggle">&#9776;</button>
         <nav class="nav-menu" id="nav-menu">
             <ul>
                 <li><a href="nosotros.html" id="menu-nosotros">Nosotros</a></li>
-                <li><a href="proceso.html" id="menu-proceso">Proceso | Process</a></li>
-                <li><a href="producto.html" id="menu-productos">Producto | Product</a></li>
-                <li><a href="compromiso.html" id="menu-compromiso">Compromiso | Commitment</a></li>
-                <li><a href="contacto.html" id="menu-contacto">Contacto | Contact</a></li>
+                <li><a href="proceso.html" id="menu-proceso">Proceso</a></li>
+                <li><a href="producto.html" id="menu-productos">Producto</a></li>
+                <li><a href="compromiso.html" id="menu-compromiso">Compromiso</a></li>
+                <li><a href="contacto.html" id="menu-contacto">Contacto</a></li>
             </ul>
         </nav>
-        <div class="idioma">
+
+       <div class="idioma">
             <a href="#" onclick="cambiarIdioma('en')">ENG</a> |
             <a href="#" onclick="cambiarIdioma('es')">ESP</a>
         </div>
     </header>
 
-    <!-- Sección principal con video -->
-    <div class="hero">
-        <video autoplay muted loop id="videoFondo">
-            <source src="IMG/alpacas.mp4" type="video/mp4">
-        </video>
-        <div class="overlay">
-            <img src="IMG/alpacas.png" alt="Kata Alpaca" class="marca">
-        </div>
-    </div>
+    <section class="hero">
+        <img src="IMG/montana.jpg" alt="Calidad y calidez desde 1991" class="hero-image">
+    </section>
 
-    <!-- NUEVA SECCIÓN DE INTRODUCCIÓN -->
     <section class="introduccion">
         <div class="container">
             <div class="text-section">
-                <p id="intro-texto1">En Kata Alpaca nos especializamos en la fabricación de prendas en tejido de punto fabricados 100% en Perú con las fibras naturales más finas.</p>
-                <p id="intro-texto2">Como fabricantes, nosotros ofrecemos una amplia gama de opciones para nuestros clientes. Nuestro know how nos permite crear soluciones únicas, eficaces e innovadoras para sus productos.</p>
+                <p>En Kata Alpaca nos especializamos en la fabricación de prendas en tejido de punto fabricados 100% en Perú con las fibras naturales más finas.</p>
+                <p>Como fabricantes, nosotros ofrecemos una amplia gama de opciones para nuestros clientes. Nuestro know how nos permite crear soluciones únicas, eficaces e innovadoras para sus productos.</p>
             </div>
             <div class="image-section">
-                <img src="IMG/5.jpg" alt="Etiqueta de producto Kata Alpaca">
+                <img src="IMG/1.jpg" alt="Etiqueta de producto">
             </div>
         </div>
     </section>
 
-    <!-- NOSOTROS -->
-    <section class="nosotros">
+    <section class="nosotros" id="nosotros">
         <div class="nosotros-contenedor">
-            <!-- Imágenes superpuestas -->
             <div class="nosotros-imagenes">
-                <img src="IMG/8.jpg" alt="Alpaca" class="imagen-alpaca">
-                <img src="IMG/3." alt="Cotton" class="imagen-cotton">
-                <!-- Mariposas flotantes -->
+                <img src="IMG/5.jpg" alt="Alpaca" class="imagen-alpaca">
+                <img src="IMG/8.jpg" alt="Cotton" class="imagen-cotton">
                 <div class="butterfly butterfly-1"></div>
                 <div class="butterfly butterfly-2"></div>
                 <div class="butterfly butterfly-3"></div>
                 <div class="butterfly butterfly-4"></div>
             </div>
-            <!-- Textos -->
             <div class="nosotros-texto">
                 <div class="texto-item">
                     <p>Buscamos desarrollar y comercializar colecciones premium utilizando hilos sostenibles de la mejor calidad como baby alpaca, algodón, merino y mezclas con fibras naturales.</p>
@@ -82,157 +65,153 @@
             </div>
         </div>
     </section>
-
-    <!-- TRADICIÓN TEXTIL MILENARIA -->
-    <section class="tradicion">
-        <div class="tradicion-contenedor">
-            <h2>Tradición textil milenaria</h2>
-            <p>Perú posee una de las tradiciones textiles más antiguas y ricas del mundo. Desde las culturas preincas hasta las comunidades andinas actuales, el arte del tejido ha sido una forma de expresión cultural, identidad y sabiduría ancestral.</p>
-        </div>
-    </section>
-
-    <!-- LINEA DE PRODUCTOS -->
-    <section class="productos">
-        <div class="productos-contenedor">
-            <div class="productos-texto">
-                <h2 id="productos-titulo">Líneas de productos</h2>
-                <a href="#" class="boton-galeria" id="productos-galeria">GALERIA</a>
-            </div>
-            <div class="productos-lista">
-                <div class="producto">
-                    <img src="IMG/para_el.jpg" alt="Para él">
-                    <p>PARA ÉL</p>
-                </div>
-                <div class="producto">
-                    <img src="IMG/para_ella.jpg" alt="Para ella">
-                    <p>PARA ELLA</p>
-                </div>
-                <div class="producto">
-                    <img src="IMG/accesorios.jpg" alt="Accesorios">
-                    <p>ACCESORIOS</p>
-                </div>
-                <div class="producto">
-                    <img src="IMG/ponchos_ruanas.jpg" alt="Ponchos y ruanas">
-                    <p>PONCHOS Y RUANAS</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-    <!-- COMPROMISO -->
-<section class="compromiso">
-    <h2 id="compromiso-titulo">Compromiso | Commitment</h2>
-    <div class="compromiso-contenedor">
-        <div class="compromiso-item">
-            <img src="icono/calidad.png" alt="Calidad">
-            <h3>La mejor calidad</h3>
-            <p>Cada una de nuestras prendas pasa por un riguroso control de calidad para asegurar que la producción cumpla y supere las expectativas de nuestros clientes.</p>
-        </div>
-        <div class="compromiso-item">
-            <img src="icono/experiencia.png" alt="Experiencia">
-            <h3>Experiencia</h3>
-            <p>Nuestro equipo cuenta con amplia experiencia en el rubro por lo que podemos ofrecer a nuestros clientes soluciones rápidas y eficaces.</p>
-        </div>
-        <div class="compromiso-item">
-            <img src="icono/produccion.png" alt="Producción">
-            <h3>Producción sostenible</h3>
-            <p>Durane nuestro proceso de producción priorizamos el uso de materiales reciclables y renovables. Promovemos prácticas sostenibles como utilización del agua y el reciclaje de materiales auxiliares.</p>
-        </div>
-        <div class="compromiso-item">
-            <img src="icono/proveedores.png" alt="Proveedores">
-            <h3>Proveedores certificados</h3>
-            <p>Trabajamos con los mejores proveedores de hilados del Perú. Sus productos certificados nos garantizan hilados de la mejor calidad.</p>
-        </div>
-        <div class="compromiso-item">
-            <img src="icono/tecnologias.png" alt="Tecnologías">
-            <h3>Nuevas tecnologías</h3>
-            <p>Contamos con máquinas modernas con alta tecnología que nos permiten crear gran variedad de diseños y puntos de tejido en los mejores tiempos de producción.</p>
-        </div>
-        <div class="compromiso-item">
-            <img src="icono/atencion.png" alt="Atención">
-            <h3>Atención personalizada</h3>
-            <p>Colaboramos mano a mano con nuestros clientes para el desarrollo de sus colecciones y revisamos cada detalle de la producción.</p>
-        </div>
+<section class="tradicion">
+    <div class="tradicion-contenedor">
+        <h2>Tradición textil milenaria</h2>
+        <p><em>Perú posee una de las tradiciones textiles más antiguas y ricas del mundo, 
+        Desde las culturas preincaicas hasta las comunidades andinas actuales, el arte del tejido ha sido una forma de expresión cultural, identidad y sabiduría ancestral.</em></p>
     </div>
 </section>
 
-    <!-- HOY TRANSMITIMOS ESA TRADICIÓN -->
     <section class="transmision">
         <div class="transmision-contenedor">
             <div class="transmision-texto">
                 <h2>Hoy transmitimos esa tradición textil a cada una de nuestras prendas conectando pasado y presente a través de tejidos que aún se fabrican desde el corazón</h2>
             </div>
             <div class="transmision-imagen">
-                <img src="IMG/4.jpg" alt="Transmisión textil">
+                <img src="IMG/3.jpg" alt="Tejido a mano">
             </div>
         </div>
     </section>
 
+    <section class="productos" id="productos">
+        <div class="productos-contenedor">
+            <div class="productos-texto">
+                <h2>Líneas de productos</h2>
+                <a href="#gallery" class="boton-galeria">GALERIA</a>
+            </div>
+            <div class="productos-lista">
+                <div class="producto">
+                    <img src="IMG/4.jpg" alt="Producto para él">
+                    <p>PARA ÉL</p>
+                </div>
+                <div class="producto">
+                    <img src="IMG/7.jpg" alt="Producto para ella">
+                    <p>PARA ELLA</p>
+                </div>
+                <div class="producto">
+                    <img src="IMG/8.jpg" alt="Accesorios">
+                    <p>ACCESORIOS</p>
+                </div>
+                <div class="producto">
+                    <img src="IMG/11.jpg" alt="Ponchos y ruanas">
+                    <p>PONCHOS Y RUANAS</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- PROCESOS -->
-    <section class="procesos">
-        <h2 id="procesos-titulo">Procesos</h2>
+    <section class="procesos" id="procesos">
+        <h2>Procesos</h2>
         <div class="procesos-contenedor">
             <div class="proceso">
                 <img src="IMG/diseno.jpg" alt="Diseño">
-                <h3 id="titulo-diseno">Diseño</h3>
-                <p id="texto-diseno">Incluye los mejores posts de tus viajes para que tus posibles colaboradores se hagan una idea del tipo de trabajo que realizas.</p>
+                <h3>Diseño</h3>
+                <p>Incluye los mejores posts de tus viajes para que tus posibles colaboradores se hagan una idea del tipo de trabajo que realizas.</p>
             </div>
             <div class="proceso">
                 <img src="IMG/tejido.jpg" alt="Tejido">
-                <h3 id="titulo-tejido">Tejido</h3>
-                <p id="texto-tejido">Incluye los mejores posts de tus viajes para que tus posibles colaboradores se hagan una idea del tipo de trabajo que realizas.</p>
+                <h3>Tejido</h3>
+                <p>Incluye los mejores posts de tus viajes para que tus posibles colaboradores se hagan una idea del tipo de trabajo que realizas.</p>
             </div>
             <div class="proceso">
                 <img src="IMG/confeccion.jpg" alt="Confección">
-                <h3 id="titulo-confeccion">Confección</h3>
-                <p id="texto-confeccion">Incluye los mejores posts de tus viajes para que tus posibles colaboradores se hagan una idea del tipo de trabajo que realizas.</p>
+                <h3>Confección</h3>
+                <p>Incluye los mejores posts de tus viajes para que tus posibles colaboradores se hagan una idea del tipo de trabajo que realizas.</p>
             </div>
         </div>
     </section>
 
-    <!-- GALERIA -->
-    <section class="gallery">
+    <section class="gallery" id="gallery">
         <h2 id="gallery-title">Gallery</h2>
         <div class="gallery-container">
-            <div class="gallery-item"><img src="IMG/galer01.jpg" alt="Product 1"></div>
-            <div class="gallery-item"><img src="IMG/galer02.jpg" alt="Product 2"></div>
-            <div class="gallery-item"><img src="IMG/linea_dama.jpg" alt="Product 3"></div>
-            <div class="gallery-item"><img src="IMG/galer03.jpg" alt="Product 4"></div>
-            <div class="gallery-item"><img src="IMG/galer04.jpg" alt="Product 5"></div>
-            <div class="gallery-item"><img src="IMG/galer05.jpg" alt="Product 6"></div>
-            <div class="gallery-item"><img src="IMG/galer06.jpg" alt="Product 7"></div>
-            <div class="gallery-item"><img src="IMG/galer07.jpg" alt="Product 8"></div>
-            <div class="gallery-item"><img src="IMG/galer08.jpg" alt="Product 9"></div>
-            <div class="gallery-item"><img src="IMG/galer09.jpg" alt="Product 10"></div>
+            <div class="gallery-item"><img src="IMG/galer01.jpg" alt="Gallery 1"></div>
+            <div class="gallery-item"><img src="IMG/galer02.jpg" alt="Gallery 2"></div>
+            <div class="gallery-item"><img src="IMG/galer03.jpg" alt="Gallery 3"></div>
+            <div class="gallery-item"><img src="IMG/galer04.jpg" alt="Gallery 4"></div>
+            <div class="gallery-item"><img src="IMG/galer05.jpg" alt="Gallery 5"></div>
+            <div class="gallery-item"><img src="IMG/galer06.jpg" alt="Gallery 6"></div>
+            <div class="gallery-item"><img src="IMG/galer07.jpg" alt="Gallery 7"></div>
+            <div class="gallery-item"><img src="IMG/galer08.jpg" alt="Gallery 8"></div>
+            <div class="gallery-item"><img src="IMG/galer09.jpg" alt="Gallery 9"></div>
+            <div class="gallery-item"><img src="IMG/10.jpg" alt="Gallery 10"></div>
         </div>
     </section>
 
-    <!-- ESTADISTICAS-->
-    <section class="stats-section">
-        <h1 id="title">Kata para el mundo</h1>
-        <h2 id="subtitle">ESTADÍSTICAS DE LA EMPRESA</h2>
+    <section class="compromiso" id="compromiso">
+        <h2>Compromiso</h2>
+        <div>
+        <div class="compromiso-contenedor">
+            <div class="compromiso-item">
+                <img src="icono/calidad.png" alt="Icono Calidad">
+                <h3>La mejor calidad</h3>
+                <p>Cada una de nuestras prendas pasa por un riguroso control de calidad para asegurar que la producción cumpla y supere las expectativas de nuestros clientes.</p>
+            </div>
+            <div class="compromiso-item">
+                <img src="icono/experiencia.png" alt="Icono Experiencia">
+                <h3>Experiencia</h3>
+                <p>Nuestro equipo cuenta con amplia experiencia en el rubro por lo que podemos ofrecer a nuestros clientes soluciones rápidas y eficaces.</p>
+            </div>
+            <div class="compromiso-item">
+                <img src="icono/sostenible.png" alt="Icono Sostenible">
+                <h3>Producción sostenible</h3>
+                <p>Durane nuestro proceso de producción priorizamos el uso de materiales reciclables y renovables. Promovemos prácticas sostenibles como utilización del agua y el reciclaje de materiales auxiliares.</p>
+            </div>
+            </div>
+            <div>
+                <div class="compromiso-contenedor">
+            <div class="compromiso-item">
+                <img src="icono/proveedores.png" alt="Icono Proveedores">
+                <h3>Proveedores certificados</h3>
+                <p>Trabajamos con los mejores proveedores de hilados del Perú. Sus productos certificados nos garantizan hilados de la mejor calidad.</p>
+            </div>
+            <div class="compromiso-item">
+                <img src="icono/tecnologias.png" alt="Icono Tecnología">
+                <h3>Nuevas tecnologías</h3>
+                <p>Contamos con máquinas modernas con alta tecnología que nos permiten crear gran variedad de diseños y puntos de tejido en los mejores tiempos de producción.</p>
+            </div>
+            <div class="compromiso-item">
+                <img src="icono/atencion.png" alt="Icono Atención">
+                <h3>Atención personalizada</h3>
+                <p>Colaboramos mano a mano con nuestros clientes para el desarrollo de sus colecciones y revisamos cada detalle de la producción.</p>
+            </div>
+            </div>
+            </div>
+        </div>
+    </section>
 
+    <section class="stats-section">
+        <h1>Kata para el mundo</h1>
+        <h2>ESTADÍSTICAS DE LA EMPRESA</h2>
         <div class="stats-container">
             <div class="stat-item">
-                <img src="icono/icono.png" alt="Trabajo">
-                <p id="work-since">Trabajando desde</p>
+                <img src="icono/icono.png" alt="Icono Trabajando">
+                <p>Trabajando desde</p>
                 <h3>1991</h3>
             </div>
             <div class="stat-item">
-                <img src="icono/icono_mun.png" alt="Exportación">
-                <p id="export-since">Exportando desde</p>
+                <img src="icono/icono_expor.png" alt="Icono Exportando">
+                <p>Exportando desde</p>
                 <h3>2002</h3>
             </div>
             <div class="stat-item">
-                <img src="icono/icono_expor.png" alt="Países">
-                <p id="countries">Países a los que exportamos actualmente</p>
+                <img src="icono/icono_mun.png" alt="Icono Países">
+                <p>Países a los que exportamos actualmente</p>
                 <h3>8</h3>
             </div>
             <div class="stat-item">
-                <img src="icono/icono_feria.png" alt="Ferias">
-                <p id="fairs">Ferias internacionales</p>
+                <img src="icono/icono_feria.png" alt="Icono Ferias">
+                <p>Ferias internacionales</p>
                 <h3>7</h3>
             </div>
         </div>
@@ -245,11 +224,12 @@
             <a href="https://web.facebook.com/kataalpaca/" target="_blank" rel="noopener">
                 <img src="icono/facebook.png" alt="Facebook">
             </a>
+            <a href="https://instagram.com/kataalpaca" target="_blank" rel="noopener">
+              <img src="icono/instagram.png" alt="Instagram">
+          </a>
         </div>
     </footer>
-
-    <!-- Scripts -->
+      <!-- Script para cambio de idioma -->
     <script src="JS/jscript.js"></script>
-    <script src="JS/animations.js"></script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93889b6d3ac3677d',t:'MTc0NjAzMjU1MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
